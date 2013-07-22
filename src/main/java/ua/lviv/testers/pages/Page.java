@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 
 /*
  * Abstract class representation of a Page in the UI with additional features. Page object pattern
- * 
  * @author Taras Lytvyn
  */
 public class Page {
