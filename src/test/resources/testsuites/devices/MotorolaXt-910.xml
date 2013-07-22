@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestingOpower on Motorola Xt-910">
+		
+		<parameter name="browserName" value="android"/>
+		<parameter name="ip" value="172.22.92.247"/>
+		<!-- tests -->
+	
+	<test name="tests on Motorola XT-910" preserve-order="false">
+	    <groups>
+	        <run>
+	            <include name="groupAndroid" />
+	        </run>
+	    </groups>
+		<packages>
+		    <package name="com.opower.testcase.testcategories.*"/>
+		    <package name="com.opower.testcase.quit"/>
+		</packages>
+	</test>
+	
+</suite>

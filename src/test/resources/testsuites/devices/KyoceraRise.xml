@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestingOpower on Kyocera Rise">
+		
+
+		<parameter name="browserName" value="android"/>
+		<parameter name="ip" value="172.22.92.75"/>
+		<!-- tests -->
+	
+	<test name="tests on Kyocera Rise" preserve-order="false">
+	    <groups>
+	        <run>
+	            <include name="groupAndroid" />
+	        </run>
+	    </groups>
+		<packages>
+		    <package name="com.opower.testcase.testcategories.*"/>
+		    <package name="com.opower.testcase.quit"/>
+		</packages>
+	</test>
+	
+</suite>

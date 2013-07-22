@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Opower test suite" parallel="classes" thread-count="3">
+
+	<suite-files>
+	
+		<!-- Android Suite for Opower testing-->
+		<suite-file path="./testngAndroid.xml" />
+	  
+	  	<!-- IOS Suite for Opower testing -->
+		<suite-file path="./testngIOS.xml" />
+		
+	</suite-files>
+</suite>
+
+
