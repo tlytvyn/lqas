@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="IOS">
+
+<suite-files>
+
+		
+		<!-- IOS Suite for Iphone 4-->
+		<!--<suite-file path="devices/Iphone4.xml" />-->
+		
+		<!-- IOS Suite for Iphone 5-->
+		<suite-file path="devices/Iphone5.xml" />
+
+	 
+</suite-files>
+</suite> 
