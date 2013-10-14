@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 
 import ua.lviv.testers.testcase.TestBase;
 
-public class LoginPageTest extends TestBase{
+public class HomePageTest extends TestBase{
 	
 	
 	@BeforeMethod (groups = {"groupLQAS", "all", "mobile"})
