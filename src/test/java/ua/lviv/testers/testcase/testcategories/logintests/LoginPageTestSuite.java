@@ -9,7 +9,7 @@ import ua.lviv.testers.testcase.testcategories.LoginPageTest;
 
 public class LoginPageTestSuite extends LoginPageTest{
 	
-	@Test (groups = {"groupLQAS", "all"})
+	@Test (groups = {"groupLQAS", "all", "mobile"})
 	//TS 1.1
 	public void enterAdminPageView(){
 		AdminPage admin = login.loginAdminPage(getUsermail(), getPassword());

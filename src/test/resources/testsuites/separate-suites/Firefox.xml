@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Testing on Mozilla Firefox">
+		
+
+		<parameter name="browserName" value="firefox"/>
+		<!--<parameter name="ip" value="172.22.92.66"/>-->
+		<!-- tests -->
+	
+	<test name="tests on Mozilla Firefox" preserve-order="false">
+	    <groups>
+	        <run>
+	            <include name="all" />
+	        </run>
+	    </groups>
+	    
+		<packages>
+		    <package name="com.opower.testcase.testcategories.*"/>
+		    <package name="com.opower.testcase.quit"/>
+		</packages>
+	</test>
+	
+</suite>
