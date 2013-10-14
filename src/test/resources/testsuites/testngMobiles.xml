@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Mobiles" parallel="classes" thread-count="3">
+
+<suite-files>
+
+		
+		<!-- IOS Suite for Iphone-->
+		<!--<suite-file path="devices/Iphone.xml" />-->
+		
+		<!-- IOS Suite for Android-->
+		<suite-file path="devices/Android.xml" />
+
+	 
+</suite-files>
+</suite> 

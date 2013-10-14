@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestingOpower on iOS">
+
+    <parameter name="browserName" value="iphone"/>
+    <!--Device ip address have to be coming from command line like 'mvn -Ddevice.ip=127.0.0.1'-->
+    <parameter name="ip" value="${device.ip}"/>
+    <!-- tests -->
+
+    <test name="tests on iOS" preserve-order="false">
+         <groups>
+	        <run>
+	            <include name="groupIOS" />
+	        </run>
+	    </groups>
+        <packages>
+		    <package name="com.opower.testcase.testcategories.*"/>
+		    <package name="com.opower.testcase.quit"/>
+		</packages>
+    </test>
+
+</suite>

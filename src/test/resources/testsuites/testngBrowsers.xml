@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Web Browsers" parallel="classes" thread-count="3">
+
+<suite-files>
+    
+   		<!-- Android Suite for IE browser-->
+		<!--<suite-file path="./separate-suites/IE.xml" />-->
+		
+		<!-- Android Suite for Firefox Browser-->
+		<!--<suite-file path="./separate-suites/Firefox.xml" />-->
+		
+		<!-- Android Suite for Chrome Browser-->
+		<suite-file path="./separate-suites/Chrome.xml" />
+		
+</suite-files>
+</suite> 

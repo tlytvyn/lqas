@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="General Test Suite" parallel="classes" thread-count="3">
+
+	<suite-files>
+	
+		<!-- Android Suite for Web Browsers testing-->
+		<suite-file path="./testngBrowsers.xml" />
+	  
+	  	<!-- IOS Suite for Mobile testing -->
+		<suite-file path="./testngMobiles.xml" />
+		
+	</suite-files>
+</suite>
+
+

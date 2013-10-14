@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Android" parallel="classes" thread-count="3">
+
+<suite-files>
+    
+   		<!-- Android Suite for Samsung Galaxy S2-->
+		<!--<suite-file path="./devices/SamsungGalaxyS2.xml" />-->
+		
+		<!-- Android Suite for Motorola Xt-910 S2-->
+		<!--<suite-file path="./devices/MotorolaXt-910.xml" />-->
+		
+		<!-- Android Suite for Samsung Galaxy S3-->
+		<suite-file path="./devices/SamsungGalaxyS3.xml" />
+		
+		<!-- Android Suite for Kyocera Rise-->
+		<!--<suite-file path="./devices/KyoceraRise.xml" />-->
+		
+</suite-files>
+</suite> 
