@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Reporter;
 
 import ua.lviv.testers.pages.Page;
 
@@ -18,6 +19,7 @@ public class LoginPage extends Page{
 	public WebElement avatarImage;
 	
 	public boolean isAvatarDisplayed(){
+		Reporter.log("checking the avatar image presence on screen");
 		return avatarImage.isDisplayed();
 	}
 

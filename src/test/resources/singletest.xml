@@ -11,7 +11,7 @@
 	    </groups>
 	
 		<classes>
-		  <!--<class name="ua.lviv.testers.testcase.testcategories.hometests.HomePageTestSuite"/>-->
+		  <class name="ua.lviv.testers.testcase.testcategories.hometests.HomePageTestSuite"/>
 		  <class name="ua.lviv.testers.testcase.testcategories.logintests.LoginPageTestSuite"/>
 		</classes>
 			

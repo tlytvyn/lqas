@@ -1,5 +1,9 @@
 package ua.lviv.testers.webdriver;
 
+import net.lightbody.bmp.proxy.ProxyServer;
+
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.android.AndroidDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,6 +12,8 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.iphone.IPhoneDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 /*
@@ -25,16 +31,20 @@ public class WebDriverFactory {
 	public static final String HTML_UNIT = "htmlunit";
 	public static final String IPHONE = "iphone";
 	public static final String ANDROID = "android";
-
+	public static ProxyServer server;
 	
 	public static WebDriver getInstance(String browser) throws Exception {
-
+		server = new ProxyServer(4444);
+		server.start();
+		Proxy proxy = server.seleniumProxy();
 		WebDriver webDriver = null;
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability(CapabilityType.PROXY, proxy);
 
 		if (CHROME.equals(browser)) {
 			setChromeDriver();
-
-			webDriver = new ChromeDriver();
+			capabilities.setJavascriptEnabled(true);
+			webDriver = new ChromeDriver(capabilities);
 		} else if (FIREFOX.equals(browser)) {
 
 			FirefoxProfile ffProfile = new FirefoxProfile();

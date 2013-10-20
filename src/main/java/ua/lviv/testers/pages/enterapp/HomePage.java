@@ -2,11 +2,15 @@ package ua.lviv.testers.pages.enterapp;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 import ua.lviv.testers.pages.Page;
 
@@ -27,6 +31,9 @@ public class HomePage extends Page{
 	@FindBy (how = How.CLASS_NAME, using = "tooltip-text")
 	public WebElement signInMenu;
 	
+	@FindBy (how = How.ID, using = "menu-item-10")
+	public WebElement forumButton;
+	
 	@FindBy (how = How.NAME, using = "user_login")
 	public WebElement loginTextBox;
 	
@@ -44,13 +51,19 @@ public class HomePage extends Page{
 		signInButton.click();
 		WebDriverWait wait = new WebDriverWait(webDriver, 10);
 		wait.until(ExpectedConditions.visibilityOf(signInMenu));
-		loginTextBox.clear();
 		passwordTextBox.clear();
 		loginTextBox.sendKeys(loginName);
 		passwordTextBox.sendKeys(password);
 		loginButton.click();
+		Reporter.log("Loging to Admin Page with login name " + loginName + " and password " + password);
 		return PageFactory.initElements(webDriver, LoginPage.class);
 	}
-
+	
+	public boolean verifySignInDisapearing() throws InterruptedException{
+		Actions seleniumActions = new Actions(webDriver);
+		Action mouseOver = seleniumActions.moveToElement(signInButton).clickAndHold().build();
+		mouseOver.perform();
+		return signInMenu.isDisplayed();
+	}
 
 }
