@@ -2,7 +2,6 @@ package ua.lviv.testers.webdriver;
 
 import net.lightbody.bmp.proxy.ProxyServer;
 
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.android.AndroidDriver;
@@ -15,12 +14,12 @@ import org.openqa.selenium.iphone.IPhoneDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-
 /*
  * 
  * @author Taras Lytvyn
  */
 
+@SuppressWarnings("deprecation")
 public class WebDriverFactory { 
 	
 	/* Browsers constants */
